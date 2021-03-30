@@ -1,0 +1,322 @@
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+
+/* HEADER */
+
+.site-header
+{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 0% 65%);
+    overflow: hidden;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    color: white;
+}
+
+.logo
+{
+    width: 50%;
+    height: 100px;
+    padding-left: 150px;
+}
+
+.menu
+{
+    width: 50%;
+    height: 100px;
+    padding-left: 20%;
+}
+
+.menu ul
+{
+    width: 50%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.menu ul li
+{
+    font-family: 'Bebas Neue', sans-serif;
+    list-style: none;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
+    animation: 1s ease-out 0s 1 makeBigger;
+}
+
+.menu ul li a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.menu ul li:hover::after
+{
+    width: 100%;
+    transition: width .3s;
+}
+
+    
+
+/* HTML, BODY, LOADER*/
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/* FOOTER */
+
+.footer
+{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftfoot
+{
+    padding-top: 1.5%;
+    padding-bottom: 1%;
+    padding-left: 6%;
+    width: 30%;
+}
+
+.middlefoot
+{
+    font-size: 25px;
+    font-family: 'Rajdhani', sans-serif;
+    width: 30%;
+    text-align: center;
+    padding-top: 3.5%;
+    padding-bottom: 2.5%;
+    padding-left: 8%;
+}
+
+.rightfoot
+{
+    font-size: 35px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    padding-left: 10%;
+    padding-right: 2%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    width: 30%;
+}
+
+.footer .footer-links
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#findus
+{
+    font-family: 'Rajdhani', sans-serif;
+    padding-top: 8%;
+    padding-right:2%;
+    font-size: 20px;
+}
+
+.footer .footer-links a
+{
+    padding-top: 3%;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    line-height: 120px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.footer .footer-links a i
+{
+    font-size: 50px;
+    transition: all 0.3s linear;
+}
+
+.footer .footer-links a i:hover
+{
+    transform: scale(1.4);
+}
+
+.fa-instagram
+{
+    color:#9c0223;
+}
+
+.fa-twitter
+{
+    color: #9c0223;
+}
+
+.fa-facebook
+{
+    color: #9c0223;
+}
+
+@keyframes makeBigger {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+@media only screen and (max-width: 1900px)
+  {
+    .menu ul li
+    {
+        font-size: 20px;
+    }
+
+    .menu
+    {
+        padding-right: 100px;
+    }
+
+    .logo
+    {
+        padding-left: 150px;
+        height: 75%;
+    }
+  }
+
+@media only screen and (max-width: 1400px)
+  {
+    .menu ul li
+    {
+        font-size: 20px;
+    }
+
+    .menu
+    {
+        padding-right: 100px;
+    }
+
+    .logo
+    {
+        padding-left: 150px;
+        height: 75%;
+    }
+
+  }
+
+@media only screen and (max-width: 1000px)
+{
+    .menu ul li
+    {
+        font-size: 20px;
+    }
+
+    .menu
+    {
+        padding-right: 150px;
+    }
+
+    .logo
+    {
+        padding-left: 10px;
+        height: 75%;
+    }
+}
+
+@media only screen and (max-width: 700px)
+{
+    .menu ul li
+    {
+        font-size: 17px;
+    }
+
+    .menu
+    {
+        padding-right: 100px;
+    }
+
+    .logo
+    {
+        padding-left: 10px;
+        height: 75%;
+    }
+
+}
+
+@media only screen and (max-width: 600px)
+{
+    .menu ul li
+    {
+        font-size: 10px;
+    }
+
+    .menu
+    {
+        padding-right: 0px;
+    }
+
+    .logo
+    {
+        padding-left: 10px;
+        height: 75%;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+
+    .menu ul li
+    {
+        font-size: 10px;
+
+    }
+
+    .menu
+    {
+        padding-right: 0px;
+    }
+
+    .logo
+    {
+        padding-left: 10px;
+        height: 75%;
+    }
+}
