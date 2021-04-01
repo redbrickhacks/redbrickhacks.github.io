@@ -161,7 +161,7 @@ body
 
 .footer .footer-links a i
 {
-    font-size: 50px;
+    font-size: 40px;
     transition: all 0.3s linear;
 }
 
@@ -179,6 +179,12 @@ body
 {
     color: #9c0223;
 }
+
+.fa-linkedin
+{
+    color: #9c0223;
+}
+
 
 .fa-facebook
 {
