@@ -1,0 +1,242 @@
+
+body
+{
+    background: black;
+    display: flex;
+    justify-content: left;    
+}
+
+
+.footer 
+{
+    color: white;
+    background: linear-gradient(150deg, rgba(42,46,53,4),rgba(29,32,38,0));
+}
+
+.site-header
+{
+    background: linear-gradient(150deg, rgba(42,46,53,4),rgba(29,32,38,0));
+}
+
+.menu ul li a
+{
+    color: white;
+}
+
+.menu ul li a.active
+{
+    color: red;
+}
+
+main
+{
+    display: grid;
+    grid-template-columns: repeat(24, minmax(auto, 60px));
+    grid-gap: 40px;
+    padding: 60px 0;
+    padding-top: 9%;
+}
+
+.cards
+{
+    grid-column: 2 / span 24;
+    display: grid;
+    grid-template-columns: repeat(24, minmax(auto, 60px));
+    grid-gap: 40px;
+}
+
+.card
+{
+    grid-column-end: span 6;
+    display: flex;
+    flex-direction: column;
+    background-color: #9c0223;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+
+.card_image-container
+{
+   width: 100%;
+   height: 100%;
+   padding-top: 150%; 
+   overflow: hidden;
+   position: relative;
+}
+
+.card_image-container img
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card_content
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    display: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+
+.name
+{
+    font-size: 2.5em;
+}
+
+.team
+{
+    font-size: 2em;
+}
+
+.card_image-container:hover + .card_content
+{
+    display: block;
+}
+
+.card_image-container:hover
+{
+ 
+    filter: blur(2.5px);
+}
+
+.card_image-container img:hover
+{
+   opacity: 0.5;
+}
+   
+
+ @media only screen and (min-width: 1900px)
+  {
+      main
+      {
+          padding-top: 10%;
+      }
+  }
+
+  @media only screen and (max-width: 1900px)
+  {
+      main
+      {
+          padding-top: 12%;
+      }
+  }
+
+  @media only screen and (max-width: 1700px)
+  {
+      main
+      {
+          padding-top: 15%;
+      }
+  }
+
+ @media only screen and (max-width: 1400px)
+  {
+      main
+      {
+          padding-top: 17%;
+      }
+  }
+
+ @media only screen and (max-width: 1300px)
+  {
+      main
+      {
+          padding-top: 20%;
+      }
+  }
+
+ @media only screen and (max-width: 1100px)
+{
+    main
+    {
+        padding-top: 25%;
+    }
+}
+
+ @media only screen and (max-width: 1000px)
+{
+    main
+    {
+        grid-template-columns: 10px repeat(6, 1fr) 10px;
+        grid-gap: 10px;
+        padding-top: 30%;
+    }
+
+    .card
+    {
+        grid-column-end: span 6;
+    }
+
+    .cards
+    {
+        grid-column: 2 / span 6;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+ @media only screen and (max-width: 700px)
+{
+    main
+    {
+        grid-template-columns: 10px repeat(6, 1fr) 10px;
+        grid-gap: 10px;
+        padding-top: 35%;
+    }
+
+    .card
+    {
+        grid-column-end: span 6;
+    }
+
+    .cards
+    {
+        grid-column: 2 / span 6;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+
+}
+
+ @media only screen and (max-width: 600px)
+{
+    main
+    {
+        padding-top: 42%;
+    }
+}
+
+ @media only screen and (max-width: 500px)
+{
+    main
+    {
+        grid-template-columns: 10px repeat(6, 1fr) 10px;
+        grid-gap: 10px;
+        padding-top: 42%;
+    }
+
+    .cards
+    {
+        grid-column: 2 / span 6;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+
+    .card
+    {
+        grid-column-end: span 6;
+    }
+}
+
+
