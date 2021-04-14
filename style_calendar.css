@@ -41,6 +41,95 @@ body
     height: 100%;
 }
 
+/*BLURRED OUT COMING SOON*/
+
+.comingsoon
+{
+    top:50%;
+    left: 50%;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    color: #000;
+    text-align:center;
+    z-index: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 3px 3px 6px white;
+}
+
+.comingsoon h1
+{
+    font-size: 100px;
+    letter-spacing: 15px;
+}
+
+.comingsoon hr
+{
+    width: 50%;
+    margin: 20px auto;
+    border: 2px solid #000;
+}
+
+
+.blurredout
+{
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+}
+
+#launch
+{
+    font-size: 40px;
+}
+
+button
+{
+    font-family: 'Fjalla One', sans-serif;
+    background: none;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    padding: 12px 20px;
+    min-width: 75px;
+    margin: 10px;
+    position: relative;
+    margin-left: auto;
+    color: white;
+}
+
+button:hover
+{
+    color: #fff;
+}
+
+button::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleY(0);
+}
+
+button:hover::before
+{
+    transform: scaleY(1);
+}
+
+button
+{
+    color: black;
+    border: 2px solid #000;
+    position: absolute;
+    left: 40%;
+}
 
 
 @media only screen and (min-width: 1900px)
