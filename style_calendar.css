@@ -1,8 +1,6 @@
 body
 {
-    background: black;
-    display: flex;
-    justify-content: left;    
+    background: black;  
 }
 
 
@@ -27,110 +25,165 @@ body
     color: red;
 }
 
-.contactformgoogle
+main
 {
-    text-align: center;
-    height: 100vh;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 5%;
 }
 
-#contact-form
+.main-timeline a
 {
-    width: 100%;
-    height: 100%;
+    pointer-events: none;
+    cursor: default;
 }
 
-/*BLURRED OUT COMING SOON*/
-
-.comingsoon
+.main-timeline
 {
-    top:50%;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+.main-timeline::before
+{
+    content:"";
+    width: 10px;
+    height: 90%;
+    border: 3px solid #bbbbbb;
+    position: absolute;
+    top: 40px;
     left: 50%;
-    position:absolute;
-    transform: translate(-50%, -50%);
-    color: #000;
-    text-align:center;
-    z-index: 1;
-    font-family: 'Bebas Neue', sans-serif;
-    text-shadow: 3px 3px 6px white;
+    transform: translateX(-50%);
 }
 
-.comingsoon h1
-{
-    font-size: 100px;
-    letter-spacing: 15px;
-}
-
-.comingsoon hr
+.main-timeline .timeline
 {
     width: 50%;
-    margin: 20px auto;
-    border: 2px solid #000;
-}
-
-
-.blurredout
-{
-    filter: blur(20px);
-    -webkit-filter: blur(20px);
-}
-
-#launch
-{
-    font-size: 40px;
-}
-
-button
-{
-    font-family: 'Fjalla One', sans-serif;
-    background: none;
-    border: 2px solid #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: color 0.4s linear;
-    padding: 12px 20px;
-    min-width: 75px;
-    margin: 10px;
+    padding: 10px 60px 10px 100px;
+    float: right;
     position: relative;
-    margin-left: auto;
+}
+
+.main-timeline .timeline::before
+{
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #9c0223;
+    border: 5px solid white;
+    box-shadow: 0 0 1px 5px #9c0223;
+    position: absolute;
+    top: 42px;
+    left: -20px;
+}
+
+.main-timeline .timeline-content{
+    display:block;
+    background: #111111;
+    padding: 70px 30px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2) inset;
+    position: relative;
+    font-family: 'Rajdhani', sans-serif;
     color: white;
 }
 
-button:hover
+.main-timeline .timeline-content:hover
 {
-    color: #fff;
+    text-decoration: none;
 }
 
-button::before
+.main-timeline .date
 {
-    content: '';
+    display: block;
+    width: 80%;
+    height: 50px;
+    background:#9c0223;
+    padding: 0 0 0 50px;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    line-height: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4) inset;
+    border-radius: 10px 10px 10px 0;
     position: absolute;
+    top: 20px;
+    left: -20px;
+}
+
+.main-timeline .date::before
+{
+    content: "";
+    border-top: 40px solid #9c0223;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    bottom: -60px;
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    z-index: -1;
-    transition: transform 0.5s;
-    transform-origin: 0 0;
-    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-    transform: scaleY(0);
 }
 
-button:hover::before
+.main-timeline .title
 {
-    transform: scaleY(1);
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    padding-top: 5%;
 }
 
-button
+.main-timeline .description
 {
-    color: black;
-    border: 2px solid #000;
-    position: absolute;
-    left: 40%;
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
 }
 
+.main-timeline .timeline:nth-child(2n)
+{
+    padding: 10px 100px 10px 60px;
+    text-align: right;
+}
+
+.main-timeline .timeline:nth-child(2n):before
+{
+    left:auto;
+    right:-20px;
+}
+
+.main-timeline .timeline:nth-child(2n) .date
+{
+    padding-right: 50px;
+    border-radius: 10px 10px 0 10px;
+    left: auto;
+    right: -20px;
+}
+
+.main-timeline .timeline:nth-child(2n) .date::before
+{
+    border-left: none;
+    border-right: 20px solid transparent;
+    left: auto;
+    right: 0;
+}
+
+.main-timeline .timeline:nth-child(2)
+{
+    margin-top: 140px;
+}
+
+.main-timeline .timeline:nth-child(odd)
+{
+    margin:-140px 0 0 0;
+}
+
+.main-timeline .timeline:nth-child(even)
+{
+    margin-bottom: 60px;
+}
+
+.main-timeline .timeline:first-child, .main-timeline .timeline:last-child:nth-child(even)
+{
+    margin:0;
+}
 
 @media only screen and (min-width: 1900px)
 {

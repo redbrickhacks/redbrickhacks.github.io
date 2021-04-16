@@ -14,72 +14,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
         <link rel = "shortcut icon" type = "image/jpg" href = "logo.png">
 
-        <script type = "text/javascript">
-
-        // Set the date we're counting down to
-var countDownDate = new Date("May 29, 2021 00:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  if (days <  10)
-  {
-    var strDays = "0" + days;
-  }
-  else
-  {
-    strDays = days;
-  }
-  if (hours < 10)
-  {
-    var strHours = "0" + hours;
-  }
-  else
-  {
-    strHours = hours;
-  }
-  if (minutes < 10)
-  {
-    var strMinutes = "0" + minutes;
-  }
-  else
-  {
-    strMinutes = minutes;
-  }
-  if (seconds < 10)
-  {
-    var strSeconds = "0" + seconds;
-  }
-  else 
-  {
-    strSeconds = seconds;
-  }
-
-  // Display the result in the element with id="demo"
-  document.getElementById("launch").innerHTML = strDays + " : " + strHours + " : "
-  + strMinutes + " : " + strSeconds;
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("launch").innerHTML = "EXPIRED";
-  }
-}, 1000);
-
-        </script>
-
         <title>RedBrick Hacks</title>
     </head>
 
@@ -100,29 +34,79 @@ var x = setInterval(function() {
         </nav>
     </header>
 
-    <div class="comingsoon">
-        <h1>COMING SOON</h1>
-        <hr>
-            <p id = "launch"></p>
-            <a href = "index.html"><button>Go Back</button></a>
-    </div>
-
-    <div class="blurredout">
     <body>
         <main>
-            
-            <p style = "padding-top: 2%;text-align: center; color: white;padding-bottom: 1%; font-family: 'Rajdhani', sans-serif; font-weight: bold; font-size: 70px; ">Calendar</p>
-            <h4 style = "padding-left: 2%; padding-right: 2%;text-align: center; color: white;padding-bottom: 5%; font-family: 'Rajdhani', sans-serif;">Want to know when an event is happening? Go through our calendar to find out!</h4>
-            
-            <div class="socialmedia" style = "background-image: linear-gradient(150deg, rgba(42,46,53,4),rgba(29,32,38,0));">
-            <div class="contactformgoogle">
-                <iframe src="https://calendar.google.com/calendar/embed?src=en.indian%23holiday%40group.v.calendar.google.com&ctz=Asia%2FKolkata" style="border: 0" width="90%" height="100%" frameborder="0" scrolling="no"></iframe>
-            </div>
 
-             </div>
+         <div class="main-timeline">
+
+           <div class="timeline">
+             <a href = "" class = "timeline-content">
+               <span class = "date">July 1, 2021</span>
+               <h3 class = "title">Title</h3>
+               <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veniam ratione impedit, maiores nesciunt ullam libero ab saepe laboriosam consequuntur debitis atque. Veritatis fugiat illum culpa repudiandae sequi facilis alias.</p>
+             </a>
+           </div>
+
+           <div class="timeline">
+            <a href = "" class = "timeline-content">
+              <span class = "date">July 2, 2021</span>
+              <h3 class = "title">Title</h3>
+              <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veniam ratione impedit, maiores nesciunt ullam libero ab saepe laboriosam consequuntur debitis atque. Veritatis fugiat illum culpa repudiandae sequi facilis alias.</p>
+            </a>
+          </div>
+
+          <div class="timeline">
+            <a href = "" class = "timeline-content">
+              <span class = "date">July 3, 2021</span>
+              <h3 class = "title">Title</h3>
+              <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veniam ratione impedit, maiores nesciunt ullam libero ab saepe laboriosam consequuntur debitis atque. Veritatis fugiat illum culpa repudiandae sequi facilis alias.</p>
+            </a>
+          </div>
+
+          <div class="timeline">
+            <a href = "" class = "timeline-content">
+              <span class = "date">July 4, 2021</span>
+              <h3 class = "title">Title</h3>
+              <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veniam ratione impedit, maiores nesciunt ullam libero ab saepe laboriosam consequuntur debitis atque. Veritatis fugiat illum culpa repudiandae sequi facilis alias.</p>
+            </a>
+          </div>
+
+          <div class="timeline">
+            <a href = "" class = "timeline-content">
+              <span class = "date">July 1, 2021</span>
+              <h3 class = "title">Title</h3>
+              <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veniam ratione impedit, maiores nesciunt ullam libero ab saepe laboriosam consequuntur debitis atque. Veritatis fugiat illum culpa repudiandae sequi facilis alias.</p>
+            </a>
+          </div>
+
+          <div class="timeline">
+           <a href = "" class = "timeline-content">
+             <span class = "date">July 2, 2021</span>
+             <h3 class = "title">Title</h3>
+             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veniam ratione impedit, maiores nesciunt ullam libero ab saepe laboriosam consequuntur debitis atque. Veritatis fugiat illum culpa repudiandae sequi facilis alias.</p>
+           </a>
+         </div>
+
+         <div class="timeline">
+           <a href = "" class = "timeline-content">
+             <span class = "date">July 3, 2021</span>
+             <h3 class = "title">Title</h3>
+             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veniam ratione impedit, maiores nesciunt ullam libero ab saepe laboriosam consequuntur debitis atque. Veritatis fugiat illum culpa repudiandae sequi facilis alias.</p>
+           </a>
+         </div>
+
+         <div class="timeline">
+           <a href = "" class = "timeline-content">
+             <span class = "date">July 4, 2021</span>
+             <h3 class = "title">Title</h3>
+             <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veniam ratione impedit, maiores nesciunt ullam libero ab saepe laboriosam consequuntur debitis atque. Veritatis fugiat illum culpa repudiandae sequi facilis alias.</p>
+           </a>
+         </div>
+
+         </div> 
+
         </main>
     </body>
-    </div>
     
     <div class="footer">
         <div class="leftfoot">
